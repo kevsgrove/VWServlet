@@ -34,13 +34,15 @@ public class Bite extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String par1 =  request.getParameter("param1");
 		String par2 =  request.getParameter("param2");
-	    if(par2!="-"){
-	    	out.println(par1+"-"+par2);
-	    	//biteHandler(par1, par2);
-	    }
-	    else {
+	    if(par2.equals("-")){
 	    	out.println(par1);
 	    	//setPlayerId(par1, mobileNumber);
+	    }
+	    else if (par1.equals(par2))
+	    	out.println("self bite");
+	    else {
+	    	out.println(par1+"-"+par2);
+	    	//biteHandler(par1, par2);
 	    }
 		
 	}
