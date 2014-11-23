@@ -13,10 +13,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Bite extends HttpServlet {
 	
-	private static Player miguel = new Player("miguelinnii");
-	private static Player mario = new Player("marizzle");
-	private static Player kevin = new Player("kevsgrove");
-	
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -39,7 +35,7 @@ public class Bite extends HttpServlet {
 	    	//setPlayerId(par1, mobileNumber);
 	    }
 	    else if (par1.equals(par2))
-	    	out.println("self bite");
+	    	out.println(par1+"-self bite");
 	    else {
 	    	out.println(par1+"-"+par2);
 	    	//biteHandler(par1, par2);
