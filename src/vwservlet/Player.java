@@ -4,13 +4,13 @@ public class Player {
 	static String yoName;
 	static String id;
 	static boolean vamp;
-	static Integer vCount;
-	static Integer wCount;
+	static Integer health;
 	
 	
-	public Player(String yo) {
+	public Player(String yo, String uid, boolean v) {
 	    yoName=yo;
-	    vCount=0;
-	    wCount=0;
+	    health=100;
+	    id=uid;
+	    vamp=v;
 	}
 }
