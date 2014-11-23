@@ -11,8 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Bite
  */
-@WebServlet("/Bite")
 public class Bite extends HttpServlet {
+	
+	private static Player miguel = new Player("miguelinnii");
+	private static Player mario = new Player("marizzle");
+	private static Player kevin = new Player("kevsgrove");
+	
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -30,7 +34,14 @@ public class Bite extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String par1 =  request.getParameter("param1");
 		String par2 =  request.getParameter("param2");
-	    out.println(par1+"-"+par2);
+	    if(par2!="-"){
+	    	out.println(par1+"-"+par2);
+	    	//biteHandler(par1, par2);
+	    }
+	    else {
+	    	out.println(par1);
+	    	//setPlayerId(par1, mobileNumber);
+	    }
 		
 	}
 
